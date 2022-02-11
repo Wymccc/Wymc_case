@@ -130,7 +130,6 @@ a {
   width: 100%;
   margin: 0 auto;
   padding-top: 2px;
-  display: none;
 }
 .content #login-content .container .inner-middle .inner-blocks {
   text-align: left;
@@ -188,6 +187,7 @@ a {
   border-color: #f1eeee;
   width: 300px;
   box-sizing: border-box;
+  font: 100% Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5B8B\4F53, sans-serif;
 }
 .content #login-content .container .inner-middle .fm-field .fm-text:hover {
   border-color: #ff0036 !important;
@@ -224,6 +224,7 @@ a {
   width: 100%;
   margin: 0 auto;
   padding-top: 2px;
+  display: none;
 }
 .content #login-content .container .inner-middle1 .inner-blocks {
   text-align: left;
@@ -255,6 +256,34 @@ a {
   margin-bottom: 20px;
   font-size: 14px;
 }
+.content #login-content .container .inner-middle1 .fm-field .area_phone {
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+}
+.content #login-content .container .inner-middle1 .fm-field .area_phone .areaCodePhone {
+  color: rgba(0, 0, 0, 0.0001);
+  background: url(../img/login-4.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 48px 8px;
+  width: 65px;
+  border: none;
+  outline: 0;
+  padding-left: 10px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  border-bottom: 0;
+  padding-right: 14px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  color: #3c3c3c;
+}
+.content #login-content .container .inner-middle1 .fm-field .area_phone .areaCodePhone > option {
+  color: #3c3c3c;
+}
 .content #login-content .container .inner-middle1 .fm-field .fm-label-icon {
   width: 40px;
   height: 40px;
@@ -281,6 +310,18 @@ a {
   border-color: #f1eeee;
   width: 300px;
   box-sizing: border-box;
+  padding-left: 110px;
+  font: 100% Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5B8B\4F53, sans-serif;
+}
+.content #login-content .container .inner-middle1 .fm-field .send_btn {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  line-height: 40px;
+}
+.content #login-content .container .inner-middle1 .fm-field .send_btn > a {
+  color: #6c6c6c;
+  font-size: 12px;
 }
 .content #login-content .container .inner-middle1 .fm-field .fm-text:hover {
   border-color: #ff0036 !important;
