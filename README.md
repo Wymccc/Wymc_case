@@ -8,7 +8,7 @@ $ git clone https://github.com/Wymccc/Wymc_case.git
 $ git remote add origin https://github.com/Wymccc/Wymc_case.git
 
 # 查看所有远程仓库源
-$ git remote
+$ git remote  
 
 #查看源路径
 $ git remote get-url origin
