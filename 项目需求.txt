@@ -1,0 +1,27 @@
+1. PC端电商网站 (京东、天猫、苏宁易购、小米、淘宝)
+2. 页面(网站首页 除导航banner 外 需要4屏内容    注册 登录 商品详情 购物车页)
+3. PC端全栈项目 不考虑移动端 ( 允许使用bootstrap )
+4. 功能实现( 首页所有可见效果 均要求实现   登录和注册(表单验证)  商品详情所有(CSS 和 JS的静态功能) 购物车写好静态页面)
+5. 所有代码进行前后端分离
+6. 所有的样式 同一使用 less
+
+
+项目目录结构
+- www.jd.com
+  - [ interface ] 
+  - [ src ]
+     - [ js ]
+     - [ styles ]
+         - index.less
+         - item.less
+         - header.less
+    -  [ css ]
+     - [ img ]
+     - index.html
+     - item.html
+     - shop.html
+     - login.html
+     - reg.html
+  - [ dist ]
+  - .gitignore
+  - README.md
