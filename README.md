@@ -17,6 +17,7 @@ $ git remote get-url origin
 $ git push -u origin main
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                     ymc
@@ -24,6 +25,10 @@ $ git push -u origin main
 
 
                     
+>>>>>>> Yemeicun
+=======
+
+               
 >>>>>>> Yemeicun
 ### 分支操作
 ```bash
