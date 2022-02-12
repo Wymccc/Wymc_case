@@ -1,0 +1,213 @@
+@charset'utf-8';
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0 auto;
+}
+.tab{
+    width: 990px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: block;
+    height: 700px;
+    position: relative;
+    .tab_list ul{
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid rgb(230, 230, 230);
+        li{
+            font-size: 16px;
+            padding: 0 45px;
+            line-height: 46px;
+            cursor: pointer;
+            color: rgb(62, 62, 62);
+            font-weight: bolder;
+            position: relative;
+            text-align: center;
+            .huiseBG{
+                background: rgb(204, 204, 204);
+            }
+        }
+        .huise{
+            color: rgb(153, 153, 153);
+
+        }
+        .yuan1{
+            width: 24px;
+            height: 24px;
+            border-radius: 100%;
+            background: rgb(255, 0, 54);
+            color: #fff;
+            text-align: center;
+            line-height: 24px;
+            position: absolute;
+            left: 18px;
+            top:11px;
+        }
+        .current{
+            width: 160px;
+            height: 1px;
+            position: absolute;
+            left: -12px;
+            bottom: -2px;
+            border-bottom: 2px solid red;
+            padding-left: 13px;
+        }
+
+    }
+    .tab_con{
+        display: block;
+        left: 133px;
+        top: 118px;
+        width: 680px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #3e3e3e;
+        border: 2px solid #dedede;
+        border-top: 2px solid #ff4a00;
+        background-color: #FFF;
+        position: absolute;
+        font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+        .dialog_close{
+            display: inline-block;
+            zoom: 1;
+            *display: inline;
+            width: 24px;
+            height: 24px;
+            font-size: 24px;
+            text-align: center;
+            line-height: 24px;
+            color: #DDD;
+            text-decoration: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #ff0036;
+            .icon-x{
+                font-size: 26px;
+                font-weight: bolder;
+            }
+        }
+        .dialog_header>h3{
+            font-size: 16px;
+        }
+        .dialog_body>p{
+            margin-top: 8px;
+            margin-left: 5px;
+            font-size: 12px;
+            strong{
+                color: #000;
+                font-weight: 700;
+            }
+            >a{
+                font-weight: 700;
+                font-size: 14px;
+                color: #ff0036;
+            }
+            .btn {
+                height: 36px;
+                line-height: 36px;
+                padding: 0 20px;
+                color: #fff;
+                font-weight: 700;
+                font-size: 16px;
+                text-align: center;
+                background: #ff0036;
+                border: 0;
+                border-radius: 3px;
+                cursor: pointer;
+                min-width: 180px;
+                &:hover{
+                    background-color: rgba(255,0,54,.8);
+                }
+            }
+        }
+    }
+}
+.dialog_mifeng{
+    z-index: 999999;
+    top: 300px;
+    right: 23%;
+    position: absolute;
+    font-family: PingFang SC,HEITI SC,Microsoft YaHei,STHeiti Light,sans-serif!important;
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+    .dialog_top{
+        position: relative;
+        width: 120px;
+        .dialog_top_tu{
+            cursor: move;
+            width: 61px;
+            height: 84px;
+            margin: 0 auto -12px;
+            background: url(../img/reg-1.svg);
+            background-size: contain;
+        }
+        .close-icon{
+            position: absolute;
+            top: -7px;
+            right: 0;
+            cursor: pointer;
+            .icon-x1{
+                font-size: 18px;
+            }
+        }
+        .dialog_text{
+            background: #fff;
+            border: 2px solid #f7931e;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px 0 rgb(0 0 0 / 30%);
+            >ul{
+                margin: 10px 0 0;
+                padding: 0;
+                list-style-type: none;
+                li:nth-child(2n){
+                    background: #fff8e8;
+
+                }
+                >li{
+                    padding: 5px;
+                    color: #333;
+                    font-size: 12px;
+                    transition: .3s;
+                    &:hover{
+                        cursor: pointer;
+                        background: #fff0cc;
+                    }
+                }
+            }
+          .dialog_bottom_tiwen{
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 5px 0 3px;
+            border: 0;
+            border-radius: 0 0 6px 6px;
+            background: #f7931e;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+            .icon-talk{
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+                vertical-align: middle;
+                fill: currentColor;
+            }
+            >span{
+                vertical-align: middle;
+            }
+          }
+        }
+    }
+}
