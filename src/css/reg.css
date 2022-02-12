@@ -1,0 +1,209 @@
+@charset 'utf-8';
+* {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0 auto;
+}
+.tab {
+  width: 990px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: block;
+  height: 700px;
+  position: relative;
+}
+.tab .tab_list ul {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #e6e6e6;
+}
+.tab .tab_list ul li {
+  font-size: 16px;
+  padding: 0 45px;
+  line-height: 46px;
+  cursor: pointer;
+  color: #3e3e3e;
+  font-weight: bolder;
+  position: relative;
+  text-align: center;
+}
+.tab .tab_list ul li .huiseBG {
+  background: #cccccc;
+}
+.tab .tab_list ul .huise {
+  color: #999999;
+}
+.tab .tab_list ul .yuan1 {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background: #ff0036;
+  color: #fff;
+  text-align: center;
+  line-height: 24px;
+  position: absolute;
+  left: 18px;
+  top: 11px;
+}
+.tab .tab_list ul .current {
+  width: 160px;
+  height: 1px;
+  position: absolute;
+  left: -12px;
+  bottom: -2px;
+  border-bottom: 2px solid red;
+  padding-left: 13px;
+}
+.tab .tab_con {
+  display: block;
+  left: 133px;
+  top: 118px;
+  width: 680px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #3e3e3e;
+  border: 2px solid #dedede;
+  border-top: 2px solid #ff4a00;
+  background-color: #FFF;
+  position: absolute;
+  font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', \5b8b\4f53, sans-serif;
+}
+.tab .tab_con .dialog_close {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 24px;
+  color: #DDD;
+  text-decoration: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ff0036;
+}
+.tab .tab_con .dialog_close .icon-x {
+  font-size: 26px;
+  font-weight: bolder;
+}
+.tab .tab_con .dialog_header > h3 {
+  font-size: 16px;
+}
+.tab .tab_con .dialog_body > p {
+  margin-top: 8px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+.tab .tab_con .dialog_body > p strong {
+  color: #000;
+  font-weight: 700;
+}
+.tab .tab_con .dialog_body > p > a {
+  font-weight: 700;
+  font-size: 14px;
+  color: #ff0036;
+}
+.tab .tab_con .dialog_body > p .btn {
+  height: 36px;
+  line-height: 36px;
+  padding: 0 20px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  background: #ff0036;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  min-width: 180px;
+}
+.tab .tab_con .dialog_body > p .btn:hover {
+  background-color: rgba(255, 0, 54, 0.8);
+}
+.dialog_mifeng {
+  z-index: 999999;
+  top: 300px;
+  right: 23%;
+  position: absolute;
+  font-family: PingFang SC, HEITI SC, Microsoft YaHei, STHeiti Light, sans-serif !important;
+  font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', \5b8b\4f53, sans-serif;
+}
+.dialog_mifeng .dialog_top {
+  position: relative;
+  width: 120px;
+}
+.dialog_mifeng .dialog_top .dialog_top_tu {
+  cursor: move;
+  width: 61px;
+  height: 84px;
+  margin: 0 auto -12px;
+  background: url(../img/reg-1.svg);
+  background-size: contain;
+}
+.dialog_mifeng .dialog_top .close-icon {
+  position: absolute;
+  top: -7px;
+  right: 0;
+  cursor: pointer;
+}
+.dialog_mifeng .dialog_top .close-icon .icon-x1 {
+  font-size: 18px;
+}
+.dialog_mifeng .dialog_top .dialog_text {
+  background: #fff;
+  border: 2px solid #f7931e;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+}
+.dialog_mifeng .dialog_top .dialog_text > ul {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+.dialog_mifeng .dialog_top .dialog_text > ul li:nth-child(2n) {
+  background: #fff8e8;
+}
+.dialog_mifeng .dialog_top .dialog_text > ul > li {
+  padding: 5px;
+  color: #333;
+  font-size: 12px;
+  transition: 0.3s;
+}
+.dialog_mifeng .dialog_top .dialog_text > ul > li:hover {
+  cursor: pointer;
+  background: #fff0cc;
+}
+.dialog_mifeng .dialog_top .dialog_text .dialog_bottom_tiwen {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 0 3px;
+  border: 0;
+  border-radius: 0 0 6px 6px;
+  background: #f7931e;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+.dialog_mifeng .dialog_top .dialog_text .dialog_bottom_tiwen .icon-talk {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+  fill: currentColor;
+}
+.dialog_mifeng .dialog_top .dialog_text .dialog_bottom_tiwen > span {
+  vertical-align: middle;
+}
