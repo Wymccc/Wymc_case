@@ -16,20 +16,8 @@ $ git remote get-url origin
 #将本地仓库推送到远程仓库
 $ git push -u origin main
 ```
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-                    ymc
 
 
-
-                    
->>>>>>> Yemeicun
-=======
-
-               
->>>>>>> Yemeicun
 ### 分支操作
 ```bash
 # 查看分支
