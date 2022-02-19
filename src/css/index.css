@@ -668,6 +668,7 @@ body a {
   margin-right: 13px;
 }
 .home_top .tmcsModule .tmcsContent .tmcsContentItem > a {
+  transition: 1s;
   text-decoration: none;
 }
 .home_top .tmcsModule .tmcsContent .tmcsContentItem > a > img {
@@ -682,7 +683,7 @@ body a {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .home_top .tmcsModule .tmcsContent .tmcsContentItem > a .tmcsName {
   margin-top: 11px;
@@ -705,6 +706,10 @@ body a {
   box-sizing: border-box;
   display: block;
   white-space: pre-wrap;
+}
+.home_top .tmcsModule .tmcsContent .tmcsContentItem:hover a {
+  text-decoration: underline;
+  opacity: 0.8;
 }
 .home_top .tmgjModule {
   margin: 18px 0 0 18px;

@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/shop.css">
+    <link rel="stylesheet" href="./css/shop.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_2983303_ye9sew17ek.css">
     <script src="http://at.alicdn.com/t/font_2983303_ye9sew17ek.js"></script>
-    <script src="../js/shop.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/cookie.js"></script>
+    <script src="./js/shop.js"></script>
 </head>
 <style type="text/css">
     .icon {
@@ -32,7 +34,7 @@
                         <div class="nav_user_hover">
                             <div class="nav_hover_touxiang">
                                 <a href="javascript:;">
-                                    <img src="../img/shop-1.jfif" alt="">
+                                    <img src="./img/shop-1.jfif" alt="">
                                 </a>
                             </div>
                             <div class="nav_hover_text">
@@ -120,7 +122,7 @@
     <div id="tm_header">
         <h1 id="logo">
             <a href="javascript:;">
-                <span><img src="../img/shop-2.png" alt=""></span>
+                <span><img src="./img/shop-2.png" alt=""></span>
             </a>
         </h1>
         <div class="search">
@@ -160,36 +162,18 @@
             <ul class="switch_cart">
                 <li class="btn_switch_cart">
                     <a href="javascript:;">
-                        <em style="font-style: normal;">全部商品</em>
-                        <span class="number">3</span>
-                        <span class="pipe"></span>
-                    </a>
-                </li>
-                <li class="btn_switch_cart disabled">
-                    <a href="javascript:;">
-                        <em style="font-style: normal;">降价商品</em>
-                        <span class="number">0</span>
-                        <span class="pipe"></span>
-                    </a>
-                </li>
-                <li class="btn_switch_cart disabled">
-                    <a href="javascript:;">
-                        <em style="font-style: normal;">库存紧张</em>
-                        <span class="number">0</span>
+                        <em style="font-style: normal;">购物车（全部）</em>
                     </a>
                 </li>
             </ul>
             <div class="cart_sum">
-                <span>已选商品（不含运费）</span>
+                <span>已选商品合计（不含运费）：</span>
                 <strong class="price">
                     <em>
-                        <span>&nbsp;</span>0.00
+                        <span class="total-symbol">&nbsp;</span>￥0.00
                     </em>
                 </strong>
                 <a href="javascript:;">结 算</a>
-            </div>
-            <div class="bottom_move">
-                <div class="floater" style="width: 123px; left: -1px;"></div>
             </div>
         </div>
         <div class="cart_main">
@@ -221,11 +205,12 @@
                     </div>
                 </div>
             </div>
-            <div id="OrderList">
-                <div class="J_ItemHead">
+           <div class="shangp">
+                <!-- <div id="OrderList">
+                    <div class="J_ItemHead">
                     <div class="shop-info">
                         <div class="cart-checkbox">
-                            <input type="checkbox">
+                            <input type="checkbox" class="j-checkbox">
                         </div>
                         &nbsp;
                         <svg class="icon" aria-hidden="true">
@@ -236,21 +221,20 @@
                         <span class="ww-light">
                             <a href="javascript:;" target="_blank" class="ww-inline"
                                 title="点此可以直接和卖家交流选好的宝贝，或相互交流网购体验，还支持语音视频噢。">
-                                <!-- <span>旺旺在线</span> -->
                             </a>
                         </span>
                     </div>
-                </div>
-                <div class="order-content">
+                    </div>
+                    <div class="order-content">
                     <div class="wp">
                         <div class="td td-chk">
-                            <input type="checkbox" class="checkall">
+                            <input type="checkbox" class="j-checkbox">
                         </div>
                         <div class="td td-item">
                             <div class="td-inner">
                                 <div class="item-pic">
                                     <a href="javascript:;">
-                                        <img src="../img/shop-5.jpg" alt="">
+                                        <img src="./img/shop-5.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class="item-info">
@@ -263,13 +247,13 @@
                                         <div class="promo-logos"></div>
                                         <div class="margin_icon_bottom">
                                             <a href="">
-                                                <img src="../img/shop-8.png" alt="">
+                                                <img src="./img/shop-8.png" alt="">
                                             </a>
                                             <a href="">
-                                                <img src="../img/shop-6.png" alt="">
+                                                <img src="./img/shop-6.png" alt="">
                                             </a>
                                             <a href="">
-                                                <img src="../img/shop-7.png" alt="">
+                                                <img src="./img/shop-7.png" alt="">
                                             </a>
                                         </div>
                                         <div class="promo-logos"></div>
@@ -300,30 +284,64 @@
                             <div class="td-inner">
                                 <div class="item-amount">
                                     <a href="#" class="J_Minus no-minus">-</a>
-                                    <input type="text" value="1" class="text text-amount">
+                                    <input type="type" value="1" class="text text-amount" max="100" min="1">
                                     <a href="#" class="J_Plus plus">+</a>
                                 </div>
                                 <div class="amount-msg J_AmountMsg"></div>
                             </div>
                         </div>
                         <div class="td td-sum">
-                        <div class="td-inner" style="padding-top: 16px;">
-                            <em tabindex="0" class="J_ItemSum number">￥239.90</em>
-                            <div class="J_ItemLottery"></div>
-                        </div>
+                            <div class="td-inner" style="padding-top: 16px;">
+                                <em tabindex="0" class="J_ItemSum number">￥239.90</em>
+                                <div class="J_ItemLottery"></div>
+                            </div>
                         </div>
                         <div class="td td-op">
                             <div class="td-inner" style="padding-top:17px">
                                 <a href="javascript:;">移入收藏夹</a>
-                                <a href="javascript:;">删除</a>
-                              <div class="xsbb_hover">
-                                <a href="javascript:;" class="xsbb">相似宝贝</a>
-                                <i class="iconfont icon-iconfonti2-copy-copy-copy-copy"></i>
-                              </div>
+                                <a href="javascript:;" class="shanchu">删除</a>
+                                <div class="xsbb_hover">
+                                    <a href="javascript:;" class="xsbb">相似宝贝</a>
+                                    <i class="iconfont icon-iconfonti2-copy-copy-copy-copy"></i>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                    </div>
+                </div> -->
+           </div>
+
+        </div>
+        <div class="float-bar-holder">
+            <div class="float-bar" style="position: static;">
+                <div class="float-bar-wrapper">
+                    <div class="qx">
+                        <input type="checkbox" class="checkall">&nbsp;全选
+                    </div>
+                    <div class="operations">
+                        <a href="#" class="J_DeleteSelected">删除</a>
+                        <a href="#" class="J_BatchFav">移入收藏夹</a>
+                    </div>
+                    <div class="float-bar-right">
+                        <div id="J_ShowSelectedItems" class="amount-sum">
+                            <span class="txt">已选商品</span>
+                            <em id="J_SelectedItemsCount">0</em>
+                            <span class="txt">件</span>
+                            <div class="arrow-box">
+                                <span class="arrow"></span>
+                            </div>
+                        </div>
+                        <div class="price-sum">
+                            <span class="txt">合计（不含运费）：</span>
+                            <strong class="price">
+                                <em id="J_Total">
+                                    <span class="total-symbol">&nbsp;</span>￥0.00
+                                </em>
+                            </strong>
+                        </div>
+                        <a href="javascript:;">结 算</a>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     </div>
@@ -470,7 +488,7 @@
                         <a href=""></a>
                     </span>
                     <span>
-                        <a href=""><img src="../img/shop-11.png" alt=""></a>
+                        <a href=""><img src="./img/shop-11.png" alt=""></a>
                     </span>
                 </div>
 

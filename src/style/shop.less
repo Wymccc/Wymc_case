@@ -7,8 +7,12 @@ li{
     list-style: none;
 }
 body{
-    background-color: #fff;
+    
     font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+
+}
+.active{
+    background: #ff5000 !important;
 }
 a{
     text-decoration: none;
@@ -420,6 +424,7 @@ a{
     width: 1190px;
     clear: both;
     margin: 0 auto;
+    
     .number,.pipe{
         font-family: Verdana,Tahoma,arial;
     }
@@ -429,59 +434,52 @@ a{
         position: relative;
         .switch_cart{
             overflow: hidden;
-            height: 33px;
+            height: 73px;
+            border-bottom: 1px solid #e6e6e6;
             .btn_switch_cart{
                 float: left;
                 font-weight: 700;
-                font-size: 16px;
-                height: 16px;
-                line-height: 1.1;
+                font-size: 18px;
+                height: 50px;
+                line-height: 50px;
                 font-family: 'Hiragino Sans GB','Lantinghei SC','Microsoft Yahei',SimSun;
                 text-align: center;
-                padding: 0 0 15px 0;
+                padding:15px;
                 cursor: pointer;
                 margin-left: -1px;
                 >a{
                     padding-left: 15px;
                     color: #3c3c3c;
                 }
-                .number{
-                    color: #f40;
-                    font-size: 14px;
-                    margin-right: 25px;
-                    font-weight: 400;
-                }
-                .pipe{
-                    width: 1px;
-                    height: 12px;
-                    display: inline-block;
-                    background: #e8e8e8;
-                }
+
             }
-            .disabled{
-               cursor:not-allowed;
-               >a{
-                cursor:not-allowed;
-                padding-left: 25px;
-               }
-            }
+           
         }
         .cart_sum{
             position: absolute;
-            right: 0;
-            top: 0;
+            right: 15px;
+            top: 15px;
             height: 25px;
             line-height: 25px;
+            >span{
+                font-size: 14px;
+            }
             >a{
+                display: inline-block;
+                width: 74px;
+                height: 42px;
+                line-height: 42px;
+                border-radius: 21px;
+                text-align: center;
+                text-decoration: none;
+                position: relative;
+                top: -2px;
+                font-size: 16px;
                 background: #aaa;
                 color: #fff;
                 cursor: not-allowed;
-                display: inline-block;
-                 width: 55px;
-                 border-radius: 2px;
-                text-align: center;
-                text-decoration: none;
             }
+           
             .price{
                 font-family: Arial,Verdana;
                 font-weight: 700;
@@ -490,28 +488,15 @@ a{
                 >em{
                     font-family: Verdana,Arial;
                     padding-left: 2px;
-                    font-weight: 700;
+                    font-weight: 500;
                     font-style: normal;
+                    font-size: 22px;
+
                     >span{
-                        font-size: 12px;
+                        font-size: 16px;
                         font-weight: 400;
                     }
                 }
-            }
-        }
-        .bottom_move{
-            clear: both;
-            background: #e6e6e6;
-            height: 2px;
-            position: relative;
-            .floater{
-                background: #f40;
-                height: 2px;
-                width: 0;
-                position: absolute;
-                top: 0;
-                left: 0;
-                overflow: hidden;
             }
         }
     }
@@ -572,16 +557,21 @@ a{
         }
         #OrderList{
             margin-bottom: 15px;
+            border: 1px solid #F5F5F5;
+            background-color: #F5F5F5;
+            border-radius: 18px;
+            overflow: hidden;
             .J_ItemHead{
                 position: relative;
                 height: 38px;
-                background: #fff;
+                // background: #fff;
                 overflow: hidden;
                 .shop-info{
                     position: relative;
                     z-index: 2;
-                    line-height: 38px;
+                    line-height: 37px;
                     padding-left: 15px;
+                    border-bottom: 1px solid #e8e8e8;
                     .J_MakePoint:hover{
                                 color: #f40;
                                 text-decoration: underline;
@@ -616,9 +606,9 @@ a{
                 }
             }
             .order-content{
-                border: 1px solid #ccc;
+                // border: 1px solid #ccc;
                 position: relative;
-                background: #fcfcfc;
+                // background: #fcfcfc;
                 overflow: hidden;
                 .td-item{
                     width: 342px;
@@ -679,7 +669,7 @@ a{
                     height: 82px;
                     overflow: hidden;
                     
-                    .checkall{
+                    .j-checkbox{
                         margin: 20px 10px 0 0;
                         float: right;
                     }
@@ -759,6 +749,10 @@ a{
                             color: #f40;
                             border: 1px solid #f40;
                         }
+                        .J_Minus:hover{
+                            color: #f40;
+                            border: 1px solid #f40;
+                        }
 
                         >a{
                             display: block;
@@ -788,7 +782,7 @@ a{
                             top: 0;
                         }
                         .no-minus{
-                            color: #e5e5e5;
+                            // color: #e5e5e5;
                             border-right-color: transparent;
                             left: 0;
                         }
@@ -850,6 +844,135 @@ a{
             .order-content:hover .td-info{
                 border-color: #dbebfe;
                      background: 0 0;
+            }
+        }
+    }
+    .float-bar-holder{
+        position: relative;
+        height: 72px;
+        background-color: #fff;
+        border-top: 1px solid #e6e6e6;
+        .float-bar{
+            width: 1190px;
+            margin: 0 auto;
+            .float-bar-wrapper{
+                height: 72px;
+                overflow: hidden;
+                margin: 0 24px;
+                .qx{
+                    float: left;
+                    width: 62px;
+                    height: 72px;
+                    line-height: 72px;
+                    padding-left: 5px;
+                    font-size: 13px;
+                    vertical-align: middle;
+                    position: relative;
+                    >input{
+                        vertical-align: middle;
+                        margin: -1px 0 0 15px;
+                    }
+                }
+                .operations{
+                    float: left;
+                    line-height: 72px;
+                    height: 72px;
+                    font-size: 13px;
+                    >a{
+                        margin-left: 25px;
+                        float: left;
+                        color: #3c3c3c;
+                    }
+                }
+                .float-bar-right{
+                    float: right;
+                    position: absolute;
+                    right: 18px;
+                    top: 15px;
+                    z-index: 4;
+                    padding-left: 20px;
+                    >a{
+                        display: inline-block;
+                        width: 74px;
+                        height: 42px;
+                        line-height: 42px;
+                        border-radius: 21px;
+                        text-align: center;
+                        text-decoration: none;
+                        position: relative;
+                        top: -2px;
+                        font-size: 16px;
+                        background: #aaa;
+                        color: #fff;
+                        cursor: not-allowed;
+                    }
+                    .amount-sum{
+                        height: 48px;
+                        color: #3c3c3c;
+                        cursor: pointer;
+                        float: left;
+                        >span{
+                            float: left;
+                            line-height: 48px;
+                            font-size: 13px;
+                            color: #000;
+                        }
+                        >em{
+                            line-height: 50px;
+                            padding: 0 5px;
+                            font-size: 20px;
+                            float: left;
+                            color: #f40;
+                            font-weight: 700;
+                            font-style: normal;
+                            font-family: tohoma,arial;
+                        }
+                        .arrow-box{
+                            float: left;
+                            .arrow{
+                                background: url(../img/shop-13.png) no-repeat -21px -21px;
+                                width: 16px;
+                                height: 16px;
+                                margin: 16px 10px 0 6px;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                    .price-sum{
+                        margin-right: 7px;
+                        height: 48px;
+                        color: #3c3c3c;
+                        float: left;
+                        >span{
+                            float: left;
+                            line-height: 48px;
+                            font-size: 13px;
+                            color: #000;
+                        }
+                        .price{
+                            color: #f40;
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 48px;
+                            font-family: Arial;
+                            vertical-align: middle;
+                            >em{
+                                font-weight: 700;
+                                font-size: 22px;
+                                padding: 0 3px;
+                                color: #f40;
+                                font-family: tohoma,arial;
+                                font-style: normal;
+                                >span{
+                                    font-size: 14px;
+                                    font-family: verdana;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+
+                }
             }
         }
     }

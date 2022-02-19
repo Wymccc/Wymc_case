@@ -692,6 +692,7 @@ body{
                 float: left;
                 margin-right: 13px;
                     >a{
+                        transition: 1s;
                         text-decoration: none;
                         >img{
                             width: 220px;
@@ -705,7 +706,7 @@ body{
                             position: absolute;
                             top: 0;
                             left: 0;
-                            background-color: rgba(0,0,0,.02);
+                            background-color: rgba(0,0,0,.1);
                         }
                         .tmcsName{
                                 margin-top: 11px;
@@ -731,6 +732,10 @@ body{
                         }
                     }
                
+            }
+            .tmcsContentItem:hover a{
+                text-decoration: underline;
+                opacity: 0.8;
             }
         }
       
