@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_2983303_vzob7w1vnto.css">
     <script src="./js/login.js"></script>
+
 </head>
 
 <body>
@@ -45,7 +46,7 @@
                             <a href="javascript:;" class="password-item">密码登录</a>
                             <a href="javascript:;" class="sms-item">短信登录</a>
                         </div>
-                        <form class="inner-form">
+                        <form class="inner-form" method="get" action="../interface/login.php">
                             <div class="fm-field">
                                 <div>
                                     <label class="fm-label-icon">
@@ -53,7 +54,7 @@
                                     </label>
                                 </div>
                                 <div class="input-wrap">
-                                    <input name="fm-login-id" type="text" class="fm-text" id="fm-login-id" tabindex="1"
+                                    <input name="username" type="text" class="fm-text" id="fm-login-id" tabindex="1"
                                         placeholder="会员名/邮箱/手机号">
                                 </div>
                             </div>
@@ -64,8 +65,7 @@
                                     </label>
                                 </div>
                                 <div class="input-wrap">
-                                    <input name="fm-login-id" type="password" class="fm-text" id="fm-login-id"
-                                        tabindex="2" placeholder="请输入登录密码" maxlength="40">
+                                    <input name="password" type="password" class="fm-text" tabindex="2" placeholder="请输入登录密码" maxlength="40">
                                 </div>
                             </div>
                             <div class="fm-btn">
